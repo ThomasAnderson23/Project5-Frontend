@@ -72,7 +72,7 @@ const Product = () => {
                 </li>
               </ol>
             </nav>
-            <div className="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+            <div className="max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8 ">
               <div className="w-full rounded-lg overflow-hidden lg:block">
                 <img
                   src={image}
@@ -95,11 +95,11 @@ const Product = () => {
                 </h2>
 
                 <p className="text-base text-gray-900 mt-6">
-                  <b>Precio</b>: ${price} USD
+                  <b>Precio</b>: ${price} CLP
                 </p>
 
                 <p className="text-base text-gray-900 mb-6">
-                  <b>Marca</b>: {brand}
+                  <b>Descripción</b>: {brand}
                 </p>
 
                 <p className="text-base text-gray-900 mb-6">
@@ -123,7 +123,8 @@ const Product = () => {
                 ) : (
                   <Link to="/crear-cuenta">
                     {" "}
-                    <button onClick={addProductHandler}
+                    <button
+                      onClick={addProductHandler}
                       type="button"
                       className="mt-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
@@ -139,37 +140,20 @@ const Product = () => {
 
                   <div className="space-y-6">
                     <p className="text-base text-gray-900">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Cras tempus malesuada odio, a euismod odio sagittis id.
-                      Phasellus volutpat dui rutrum ligula dapibus tempor.
-                      Curabitur in justo in neque aliquet sagittis quis nec
-                      augue. In mattis, lectus non imperdiet imperdiet, est
-                      lectus posuere felis, nec fermentum eros dolor ut dolor.
-                      Fusce finibus velit vitae cursus vehicula. Donec accumsan
-                      tincidunt est pulvinar suscipit. Mauris bibendum id magna
-                      at iaculis. Mauris interdum dolor quis tortor porta, et
-                      consectetur nisl viverra. Vivamus in congue mi, in feugiat
-                      enim. Etiam convallis mauris dui, quis luctus purus
-                      consectetur id. Maecenas pharetra vitae tellus fringilla
-                      congue. Quisque aliquam eget sem vel aliquam.{" "}
+                      Ingresa indicaciones especiales de tu producto
                     </p>
                   </div>
-                </div>
-
-                <div className="mt-10">
-                  <h2 className="text-sm font-medium text-gray-900">Details</h2>
-
-                  <div className="mt-4 space-y-6">
-                    <p className="text-sm text-gray-600">
-                      In a consectetur urna. Donec et ipsum turpis. Morbi in
-                      lectus vel turpis faucibus feugiat vel ac urna.
-                      Suspendisse imperdiet congue dolor, non mattis est
-                      porttitor in. Etiam commodo quam vitae congue eleifend. In
-                      a felis id velit imperdiet varius a at turpis. Nullam
-                      porta, ligula quis aliquet iaculis, lectus magna faucibus
-                      odio, eget venenatis risus lectus vitae sem.
-                    </p>
+                  <div class="form-group">
+                    <label for="comment">Escribe tu nota: </label>
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      id="comment"
+                    ></textarea>
                   </div>
+                  <button type="button" class="btn btn-primary mt-6">
+                    Enviar{" "}
+                  </button>
                 </div>
               </div>
             </div>

@@ -16,26 +16,30 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" variant="dark" bg="dark">
+      <Navbar collapseOnSelect expand="lg" variant="light" bg="light">
         <Navbar.Brand as={NavLink} to="/" className="ms-3">
-          Home
+          Inicio
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+          <Nav.Link as={NavLink} to="/">
+              Locales
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/products">
-              Products
+              Menú
             </Nav.Link>
             <Nav.Link as={NavLink} to="/cart">
-              Cart
+              Checkout
             </Nav.Link>
+            
             <NavDropdown title={userState.infoUser.firstname}>
-              <NavDropdown.Item as={NavLink} to='/user/myprofile'>My profile</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/user/myprofile'>Mi Perfil</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
             { userState.authStatus ?  <Logout /> : <Nav.Link as={NavLink} to="/auth">
-              Login
+              Inicia Sesión
             </Nav.Link>
             }
             <CartIcon />

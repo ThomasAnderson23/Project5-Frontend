@@ -11,7 +11,7 @@ const Logout = () => {
       sx={{ marginRight: 2, height: 25, marginTop: 1.2 }}
     >
       <Button onClick={signOut} variant="contained" size="small">
-        Logout
+        Cierra Sesión
       </Button>
     </Stack>
   );

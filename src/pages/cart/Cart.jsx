@@ -8,7 +8,6 @@ import PayPal from '../../components/PayPal';
 
 import './Cart.scss';
 
-
 const Cart = () => {
 
   const {cartItems, cartTotal} = useContext(CartContext)

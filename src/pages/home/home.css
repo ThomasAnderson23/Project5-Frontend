@@ -1,0 +1,22 @@
+.cafe-image {
+
+    background-image: url(../../assets/images/Cafe1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.brand {
+
+    background-image: url(../../assets/images/CAFETERÍA\ REVECO\ .gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.brunch {
+
+
+    background-image: url(../../assets/images/Brunch.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
