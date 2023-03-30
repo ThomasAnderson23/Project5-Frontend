@@ -15,12 +15,11 @@ function Home() {
     const fetchProducts = async () => {
       await getProducts();
 
-          console.log(products)
-
+      console.log(products);
     };
     fetchProducts();
 
-    console.log(products)
+    console.log(products);
   }, []);
 
   const navigate = useNavigate();
@@ -52,8 +51,9 @@ function Home() {
               size="small"
               onClick={navigateToMenu}
               className="buyButton"
+              
             >
-              ¡Ven a conocernos!{" "}
+              ¡Ven a conocernos!
             </Button>
           </Grid>
         </Grid>
@@ -92,8 +92,19 @@ function Home() {
       </Grid>
 
       <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-         <ProductSwiper products={products}/>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+          xl={12}
+          sx={{
+            backgroundColor: "light",
+            padding: "100px 25px 25px 50px",
+          }}
+        >
+          <ProductSwiper products={products} />
         </Grid>
       </Grid>
     </Grid>

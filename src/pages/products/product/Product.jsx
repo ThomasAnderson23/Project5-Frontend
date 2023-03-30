@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductContext from "../../../context/products/ProductContext";
 import UserContext from "../../../context/UserContext";
 import CartContext from "../../../context/cart/CartContext";
@@ -7,7 +7,10 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 const Product = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
+  const initialState = {
+    notaUsuario: "",
+  };
+  const [notas, setNotas] = useState(initialState);
   const { getProduct, product } = useContext(ProductContext);
   const { addItemToCart, cartCount } = useContext(CartContext);
   const { userState } = useContext(UserContext);
@@ -22,12 +25,21 @@ const Product = () => {
 
     fetchProduct();
   }, []);
+  const handleChange = (e) => {
+    setNotas((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const handleButtonNotas = () => setNotas(initialState);
 
   const handleButtonNotSignIn = () => {
     navigate("/auth");
   };
 
-  const addProductHandler = () => {if(cartCount < stock)  addItemToCart(product[0])}
+  const addProductHandler = () => {
+    if (cartCount < stock) addItemToCart(product[0]);
+  };
 
   return (
     <div className="bg-white">
@@ -121,7 +133,7 @@ const Product = () => {
                 ) : stock === 0 ? (
                   <h4 className="text-red-800 no-underline">Sin Stock</h4>
                 ) : (
-                  <Link to="/crear-cuenta">
+                  <Link to={`/product/${id}`}>
                     {" "}
                     <button
                       onClick={addProductHandler}
@@ -146,14 +158,21 @@ const Product = () => {
                   <div class="form-group">
                     <label for="comment">Escribe tu nota: </label>
                     <textarea
+                      name="notaUsuario"
+                      value={notas.notaUsuario}
+                      onChange={handleChange}
                       class="form-control"
                       rows="5"
                       id="comment"
                     ></textarea>
+                    <button
+                      onClick={handleButtonNotas}
+                      type="submit"
+                      class="btn btn-primary mt-6"
+                    >
+                      Enviar
+                    </button>
                   </div>
-                  <button type="button" class="btn btn-primary mt-6">
-                    Enviar{" "}
-                  </button>
                 </div>
               </div>
             </div>

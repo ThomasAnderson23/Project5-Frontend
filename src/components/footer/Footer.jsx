@@ -2,11 +2,12 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import "./footer.css"
 
 const Footer = () => {
   return (
     <footer>
-      <Grid container margin="10" rowSpacing={4} padding="10px">
+      <Grid container margin="10" rowSpacing={1} padding="1px" className="footer" marginTop={5}>
         <Grid item xs={12} sm={6} md={3}>
             <img src={"../../assets/images/REVECO.jpg"} alt="logo"></img>
           <Stack alignItems="center" justifyContent="center">

@@ -6,6 +6,7 @@ import CartContext from "../../context/cart/CartContext";
 import { useContext } from "react";
 import CartIcon from "../../components/cart/cart-icon/CartIcon";
 import CartDropdown from "../../components/cart/cartDropdown/CartDropdown";
+import "./navigation.css"
 
 const Navigation = () => {
 
@@ -16,7 +17,7 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" variant="light" bg="light">
+      <Navbar collapseOnSelect expand="lg" className="navBar">
         <Navbar.Brand as={NavLink} to="/" className="ms-3">
           Inicio
         </Navbar.Brand>

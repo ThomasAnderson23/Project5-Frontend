@@ -1,0 +1,14 @@
+.footer {
+  background-color: #ffe0b2;
+  font-size: small;
+  font-weight: 200px;
+  color: #a1887f;
+}
+
+.links-footer {
+
+    color: black;
+    text-decoration: none;
+
+}
+.links-footer:hover
