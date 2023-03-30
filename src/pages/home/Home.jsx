@@ -7,6 +7,7 @@ import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
 import ProductSwiper from "../../components/productSwiper/ProductSwiper";
 import ProductContext from "../../context/products/ProductContext";
+import { Container } from "@mui/system";
 
 function Home() {
   const { products, getProducts } = useContext(ProductContext);
@@ -40,22 +41,30 @@ function Home() {
           className="brand"
           sx={{
             backgroundColor: "#d2b179",
-            padding: "200px 50px 200px 50px",
+            //padding: "200px 50px 200px 50px",
+            minHeight: 400,
             textAlign: "center",
             fontFamily: "Myriad Pro Regular",
+            position: "relative",
           }}
         >
-          <Grid container>
+          <Container
+            sx={{
+              position: "absolute",
+              bottom: 0,
+              marginBottom: 2,
+            }}
+          >
             <Button
-              variant="contained"
+              variant="buttonDefault"
               size="small"
               onClick={navigateToMenu}
-              className="buyButton"
-              
+              className="buttonDefault"
+              sx={{backgroundColor: "#296560", color: "white"}}
             >
               ¡Ven a conocernos!
             </Button>
-          </Grid>
+          </Container>
         </Grid>
         <Grid
           item
