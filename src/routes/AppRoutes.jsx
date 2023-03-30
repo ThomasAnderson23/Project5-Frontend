@@ -5,6 +5,7 @@ import LayoutMain from "../components/layout/Layaout.main";
 import Auth from "../pages/auth/Auth";
 import Cart from "../pages/cart/Cart";
 import Home from "../pages/home/home";
+import Location from "../pages/locations/Locations"
 import Products from "../pages/products/Products";
 import MyProfile from "../pages/account/MyProfile";
 import Product from "../pages/products/product/Product";
@@ -31,6 +32,7 @@ const AppRoutes = ({ atributo }) => {
         <Route path="/" element={<LayoutMain />}>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/locations" element={<Location />} />
           <Route path="/product/:id" element={<Product />} />
           {isLogged === false && <Route path="/auth" element={<Auth />} />}
           <Route path="/cart" element={<Cart />} />
