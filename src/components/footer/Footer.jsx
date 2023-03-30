@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import "./footer.css"
+import { Box, Container } from "@mui/system";
+import { AspectRatio } from "@mui/material/"
 
 const Footer = () => {
   return (
@@ -49,6 +51,18 @@ const Footer = () => {
         <Grid item xs={12} sm={6} md={3}>
           <Stack alignItems="center" justifyContent="center">
             <h3 className="title-links">Próximamente</h3>
+              <Box
+        component="img"
+        aspectRatio="solid"
+        sx={{
+          height: "200px",
+          width: "200px",
+          maxHeight: { xs: 200, md: 200 },
+          maxWidth: { xs: 200, md: 200 }, 
+        }}
+        alt="QR"
+        src="../../assets/images/Proximamente.png"
+      />
             <Stack
               spacing={2}
               alignItems="center"
