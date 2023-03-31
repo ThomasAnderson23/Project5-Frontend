@@ -3,3 +3,19 @@
 @tailwind utilities;
 
 
+.textCenter {
+
+   text-align: center !important;
+
+}
+
+.buttonDefault:hover {
+
+   background-color: #296560 !important;
+   opacity: 0.6 !important;
+}
+
+.buttonDefault {
+
+   color: white !important;
+}

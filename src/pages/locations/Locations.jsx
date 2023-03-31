@@ -7,8 +7,8 @@ import "./locations.scss";
 
 const locations = () => {
   return (
-    <Grid container xs={6} sm={6} md={12} lg={12} xl={12}>
-      <Grid Item className="Item2">
+    <Grid container padding={5} justifyContent= "center">
+      <Grid Item className="textCenter" xs={12} sm={12} md={6} lg={5} xl={5}>
         <h2>Cobertura del despacho</h2>
 
         <iframe
@@ -22,8 +22,8 @@ const locations = () => {
           src="https://maps.google.com/maps?width=520&amp;height=1000&amp;hl=en&amp;q=huechuraba%20Santiago+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>
       </Grid>
-      <Grid item className="Item2">
-        <h2>Nuestros locales</h2>
+      <Grid item marginLeft={5} xs={12} sm={12} md={5} lg={5} xl={5}>
+        <h2 className="textCenter">Nuestros locales</h2>
         <Card sx={{ maxWidth: 1000, margin: 5 }}>
           <CardMedia
             sx={{ height: 200, margin: 5 }}

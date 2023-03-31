@@ -10,7 +10,7 @@ const Logout = () => {
       direction="row"
       sx={{ marginRight: 2, height: 25, marginTop: 1.2 }}
     >
-      <Button onClick={signOut} variant="contained" size="small">
+      <Button onClick={signOut} variant="contained" size="small" className="buttonDefault" sx={{ backgroundColor: "#246560" }}>
         Cierra Sesión
       </Button>
     </Stack>

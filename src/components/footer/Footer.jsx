@@ -74,13 +74,13 @@ const Footer = () => {
               justifyContent="center"
               sx={{ marginTop: 3 }}
             >
-              <Link to="#" className="links-footer">
+              <Link to="locations" className="links-footer">
                 Av. Vitacura 2360
               </Link>
-              <Link to="#" className="links-footer">
+              <Link to="locations" className="links-footer">
                 Marchant Pereira 982
               </Link>
-              <Link to="#" className="links-footer">
+              <Link to="locations" className="links-footer">
                 Av. Tobalaba 1976
               </Link>
             </Stack>

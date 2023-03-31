@@ -27,7 +27,8 @@ const CartDropdown = () => {
                 )}
                 
             </div>
-            <Button onClick={goToCartCheckoutHandler}>GO TO CHECKOUT</Button>
+            <Button onClick={goToCartCheckoutHandler}  className="buttonDefault"
+          sx={{ backgroundColor: "#296560", color: "white" }}>GO TO CHECKOUT</Button>
         </div>
     </div>
   )

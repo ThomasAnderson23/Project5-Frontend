@@ -58,7 +58,7 @@ const Auth = () => {
           padding={3}
           borderRadius={5}
           boxShadow={"5px 5px 10px #ccc"}
-          sx={{ ":hover": { boxShadow: "10px 10px 20px #7733dd" } }}
+          sx={{ ":hover": { boxShadow: "10px 10px 20px #246560" } }}
         >
           <Typography variant="h2" padding={3} textAlign={"center"}>
             {signUp ? "SignUp" : "Login"}
@@ -101,15 +101,16 @@ const Auth = () => {
           />
           <Button
             type="submit"
-            sx={{ marginTop: 3, borderRadius: 3 }}
+            sx={{ marginTop: 3, borderRadius: 3, backgroundColor: "#246560"  }}
             variant="contained"
-            color="warning"
+            className="buttonDefault"
           >
             {signUp ? "Signup" : "Login"}
           </Button>
           <Button
             onClick={resetState}
-            sx={{ marginTop: 3, borderRadius: 3 }}
+            sx={{ marginTop: 3, borderRadius: 3, backgroundColor: "#246560" }}
+            className="buttonDefault"
           >
             {!signUp ? "Change to Signup" : "Change to login"}
           </Button>

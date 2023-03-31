@@ -24,7 +24,7 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link as={NavLink} to="/locations">
+          <Nav.Link as={NavLink} to="locations">
               Locales
             </Nav.Link>
             <Nav.Link as={NavLink} to="/products">
@@ -43,7 +43,7 @@ const Navigation = () => {
               Inicia Sesión
             </Nav.Link>
             }
-            <CartIcon />
+            <CartIcon sx={{ fontColor: "black"}} />
           </Nav>
           {isCartOpen && <CartDropdown />}
 

@@ -11,9 +11,11 @@ import {
   Modal,
   TextField,
 } from "@mui/material";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import { useContext, useState, useEffect } from "react";
 import UserContext from "../../context/UserContext";
+import { grey } from "@mui/material/colors";
 
 const MyProfile = () => {
   const { userState, userSubmitForm, verifyToken } = useContext(UserContext);
@@ -62,11 +64,8 @@ const MyProfile = () => {
     <div>
       <div>
         <Container maxWidth="sm" border-style="hidden">
-          <Card sx={{ alignContent: "center", marginTop: 5 }}>
-            <CardMedia
-              sx={{ height: 300, width: 300, margin: "auto" }}
-              image="https://images.unsplash.com/photo-1500576992153-0271099def59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-            />
+          <Card sx={{ alignContent: "center", marginTop: 5, textAlign: "center" }}>
+            <AccountCircleIcon sx={{ fontSize: 200, color: grey[500], }}/>
             <CardContent>
               <Typography
                 gutterBottom
@@ -82,8 +81,8 @@ const MyProfile = () => {
               </Typography>
             </CardContent>
             <CardActions sx={{ justifyContent: "center" }}>
-              <Button onClick={handleOpen} variant="contained" color="primary">
-                Edit User
+              <Button onClick={handleOpen} variant="contained" color="primary" className="buttonDefault" sx={{ backgroundColor: "#246560" }}>
+                Editar Usuario
               </Button>
             </CardActions>
           </Card>
@@ -156,8 +155,8 @@ const MyProfile = () => {
                 />
               </div>
               <div>
-                <Button type="submit" variant="contained" color="primary">
-                  Send
+                <Button type="submit" variant="contained" className="buttonDefault" sx={{ backgroundColor: "#246560" }}>
+                  Enviar
                 </Button>
               </div>
             </div>
