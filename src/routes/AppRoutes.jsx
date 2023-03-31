@@ -10,8 +10,8 @@ import Products from "../pages/products/Products";
 import MyProfile from "../pages/account/MyProfile";
 import Product from "../pages/products/product/Product";
 
-const AppRoutes = ({ atributo }) => {
-  console.log(atributo);
+const AppRoutes = ({  }) => {
+
   const { userState, verifyToken } = useContext(UserContext);
 
   const isLogged = userState.authStatus;
