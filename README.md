@@ -4,11 +4,11 @@
 
 
 
-## 1. Introducción :tw-1f31e:
+## 1. Introducción 😎
 
 Cafeteria Reveco es una Aplicación Fullstack de eCommerce creada con la mayor tecnologia utilizando React JS, Context API, Node con ExpressJS y Mongo DB.
 
-## 2. Comenzamos :tw-1f3c3:
+## 2. Comenzamos 🏃
 
 **Instalación del proyecto**
 - Mover a su directorio de proyecto.
@@ -16,7 +16,7 @@ Cafeteria Reveco es una Aplicación Fullstack de eCommerce creada con la mayor t
 - Mover al directorio de proyecto
 - Instalar las dependencias
 
-**¿Que encontrarás?** :tw-2615:
+**¿Que encontrarás?** ☕
 
 Nuestro sitio Ecommerce cuenta con las siguientes funcionalidades:
 - Sección  de presentación 
@@ -32,7 +32,7 @@ Nuestro sitio Ecommerce cuenta con las siguientes funcionalidades:
 
 
 
-## 3. Tecnologias utilizadas :tw-1f4aa:
+## 3. Tecnologias utilizadas 🔙 🦾
 Este proyecto fue construido con las siguientes tecnologias:
 - **Nodejs** - JavaScript Runtime
 - **Express **- Framework for Nodejs
