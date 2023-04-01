@@ -2,7 +2,9 @@
 
 # **Cafetería Reveco**
 
+LINK:
 
+https://master--sage-salamander-862de6.netlify.app/
 
 ## 1. Introducción 😎
 
@@ -41,3 +43,8 @@ Este proyecto fue construido con las siguientes tecnologias:
 - **Material UI ** - React component library
 - **Axios** - HTTP client library for making requests and responses
 - **PayPal Sandbox** - Used to simulate payments
+
+## 4. Colaboradores 🔙 🦾
+- Daniela Reveco: https://github.com/DanielaReveco
+** Todos los commits se realizaron desde mi Github personal porque Daniela experimentó problemas con su cuenta.
+
