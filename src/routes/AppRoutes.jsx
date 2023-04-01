@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import LayoutMain from "../components/layout/Layaout.main";
 import Auth from "../pages/auth/Auth";
 import Cart from "../pages/cart/Cart";
-import Home from "../pages/home/home";
+import Home from "../pages/home/Home";
 import Location from "../pages/locations/Locations"
 import Products from "../pages/products/Products";
 import MyProfile from "../pages/account/MyProfile";
