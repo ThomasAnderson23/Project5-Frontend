@@ -3,6 +3,7 @@ import ProductContext from "../../../context/products/ProductContext";
 import UserContext from "../../../context/UserContext";
 import CartContext from "../../../context/cart/CartContext";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import Toaster from "../../../components/Toast/Toast";
 
 const Product = () => {
   const { id } = useParams();
@@ -10,6 +11,7 @@ const Product = () => {
   const initialState = {
     notaUsuario: "",
   };
+  const [showToast, setShowToast] = useState(false);
   const [notas, setNotas] = useState(initialState);
   const { getProduct, product } = useContext(ProductContext);
   const { addItemToCart, cartCount } = useContext(CartContext);
@@ -31,6 +33,9 @@ const Product = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const toggleShowToast = () => setShowToast(!showToast);
+
   const handleButtonNotas = () => setNotas(initialState);
 
   const handleButtonNotSignIn = () => {
@@ -38,7 +43,10 @@ const Product = () => {
   };
 
   const addProductHandler = () => {
-    if (cartCount < stock) addItemToCart(product[0]);
+    if (cartCount < stock) {
+      addItemToCart(product[0]);
+      setShowToast(!showToast)
+    }
   };
 
   return (
@@ -138,7 +146,8 @@ const Product = () => {
                     <button
                       onClick={addProductHandler}
                       type="button"
-                      className="mt-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      variant="contained"
+                      className="mt-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 backgroundColor: #246560"
                     >
                       Añadir
                     </button>
@@ -168,6 +177,7 @@ const Product = () => {
                     <button
                       onClick={handleButtonNotas}
                       type="submit"
+                      variant="contained"
                       class="btn btn-primary mt-6"
                     >
                       Enviar
@@ -179,6 +189,11 @@ const Product = () => {
           </div>
         </>
       )}
+
+      <Toaster
+        showToast={showToast}
+        toggleShowToast={toggleShowToast}
+      ></Toaster>
     </div>
   );
 };

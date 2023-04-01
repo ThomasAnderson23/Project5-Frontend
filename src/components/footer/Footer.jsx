@@ -15,11 +15,11 @@ const Footer = () => {
       <Grid
         container
         justifyContent="center"
-        margin="10"
+        // margin="10"
         rowSpacing={1}
         padding="1px"
         className="footer"
-        marginTop={5}
+        marginTop={1}
       >
         <Grid item>
           <Grid container>

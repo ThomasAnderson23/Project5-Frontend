@@ -1,6 +1,7 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import { useState, useContext } from "react";
 import UserContext from "../../context/UserContext";
+import "./Auth.css"
 
 const Auth = () => {
   const state = useContext(UserContext)
@@ -45,7 +46,7 @@ const Auth = () => {
 
 
   return (
-    <div>
+    <div className="BackgroundAuth">
       <form onSubmit={handleSubmit}>
         <Box
           display={"flex"}
@@ -60,27 +61,33 @@ const Auth = () => {
           boxShadow={"5px 5px 10px #ccc"}
           sx={{ ":hover": { boxShadow: "10px 10px 20px #246560" } }}
         >
-          <Typography variant="h2" padding={3} textAlign={"center"}>
-            {signUp ? "SignUp" : "Login"}
+          <Typography variant="h2" padding={3} textAlign={"center"} fontFamily="cursive">
+            {signUp ? "Regístrate" : "Inicia Sesión"}
           </Typography>
           {signUp && (
             <TextField
               onChange={handleChange}
               type={"text"}
-              placeholder="Firstname"
+              placeholder="Nombre"
               name="firstname"
               variant="outlined"
               value={user.firstname}
+              style={{ marginBottom: 10}}
+              
+
             />
           )}
           {signUp && (
             <TextField
               onChange={handleChange}
               type={"text"}
-              placeholder="Lastname"
+              placeholder="Apellido"
               name="lastname"
               variant="outlined"
               value={user.lastname}
+              style={{ marginBottom: 10}}
+              
+
             />
           )}
           <TextField
@@ -90,29 +97,32 @@ const Auth = () => {
             name="email"
             variant="outlined"
             value={user.email}
+            style={{ marginBottom: 10}}
           />
           <TextField
             onChange={handleChange}
             type={"password"}
-            placeholder="Password"
+            placeholder="Contraseña"
             name="password"
             variant="outlined"
             value={user.password}
+            
           />
           <Button
             type="submit"
             sx={{ marginTop: 3, borderRadius: 3, backgroundColor: "#246560"  }}
             variant="contained"
             className="buttonDefault"
+            
           >
-            {signUp ? "Signup" : "Login"}
+            {signUp ? "Regístrate" : "Inicia Sesión"}
           </Button>
           <Button
             onClick={resetState}
             sx={{ marginTop: 3, borderRadius: 3, backgroundColor: "#246560" }}
             className="buttonDefault"
           >
-            {!signUp ? "Change to Signup" : "Change to login"}
+            {!signUp ? "Ir a Registro" : "Ir a Inicio de Sesión"}
           </Button>
         </Box>
       </form>

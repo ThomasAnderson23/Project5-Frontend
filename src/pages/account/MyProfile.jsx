@@ -16,6 +16,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useContext, useState, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import { grey } from "@mui/material/colors";
+import "./MyProfile.css"
 
 const MyProfile = () => {
   const { userState, userSubmitForm, verifyToken } = useContext(UserContext);
@@ -61,17 +62,19 @@ const MyProfile = () => {
   };
 
   return (
-    <div>
+
+    <div className="backgroundProfile">
       <div>
-        <Container maxWidth="sm" border-style="hidden">
-          <Card sx={{ alignContent: "center", marginTop: 5, textAlign: "center" }}>
-            <AccountCircleIcon sx={{ fontSize: 200, color: grey[500], }}/>
+        <Container maxWidth="sm" border="solid" sx={{ backgroundColor: "#246560", borderRadius: 25 }}>
+          <Card sx={{ alignContent: "center", textAlign: "center", backgroundColor: "#FDE0B2", borderColor: "#20180C", borderWidth: 2, borderRadius: 25}}>
+            <AccountCircleIcon sx={{ fontSize: 200, color: grey[500], }}/> 
             <CardContent>
               <Typography
                 gutterBottom
                 variant="h4"
                 component="div"
                 align="center"
+                
               >
                 <h2>Bienvenido: </h2>
                 {`${firstname} ${lastname}`}
@@ -98,13 +101,13 @@ const MyProfile = () => {
               "& .MuiTextField-root": { m: 1, width: "45ch" },
               justifyContent: "center",
               alignContent: "center",
-              marginTop: "50px",
-              marginBottom: "40px",
+              marginTop: "20px",
+              
             }}
             noValidate
             autoComplete="off"
           >
-            <div>
+            <div className="editUser">
               <Typography
                 id="modal-modal-title"
                 variant="h6"
@@ -155,9 +158,9 @@ const MyProfile = () => {
                 />
               </div>
               <div>
-                <Button type="submit" variant="contained" className="buttonDefault" sx={{ backgroundColor: "#246560" }}>
+                <Button type="submit" variant="contained" className="buttonDefault" align= "center" sx={{ backgroundColor: "#246560", justifyContent: "center" }}>
                   Enviar
-                </Button>
+                </Button> 
               </div>
             </div>
           </Box>

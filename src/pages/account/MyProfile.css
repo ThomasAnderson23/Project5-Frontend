@@ -1,0 +1,11 @@
+.backgroundProfile {
+
+    background-image: url("../../assets/images/FondoCafe.png");
+    background-size: contain;
+}
+
+.editUser {
+
+    background-color: beige;
+    border-radius: 25px;
+}

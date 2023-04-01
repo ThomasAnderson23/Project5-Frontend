@@ -39,8 +39,11 @@ const Navigation = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            { userState.authStatus ?  <Logout /> : <Nav.Link as={NavLink} to="/auth">
+        
+            { userState.authStatus ?  <Logout /> : <Nav.Link as={NavLink} to="/auth" >
+      
               Inicia Sesión
+          
             </Nav.Link>
             }
             <CartIcon sx={{ fontColor: "black"}} />
