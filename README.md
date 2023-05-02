@@ -6,7 +6,7 @@ LINK:
 
 https://master--sage-salamander-862de6.netlify.app/
 
-## 1. Introducción 😎
+## 1. Introduction 😎
 
 Cafeteria Reveco is a Fullstack eCommerce Application built with the latest technology using React JS, Context API, Node with ExpressJS and Mongo DB.
 
